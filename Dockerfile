@@ -4,11 +4,11 @@ FROM ubuntu:latest
 
 # copy the executable file
 
-#COPY ExecSample4 /SwengProject/ExecSample4
+COPY ./googletest/SWEngProject/ExecSample4 /SwengProject/ExecSample4
 
 # lounch the executable
 
-#CMD ["/SwengProject/ExecSample4"]
-CMD ["/bin/bash"]
+CMD ["/SwengProject/ExecSample4"]
+#CMD ["/bin/bash"]
 
 
