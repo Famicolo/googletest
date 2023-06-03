@@ -8,3 +8,9 @@ else
     #echo $password | sudo -S apt-get install -y build-essential    # -y da assume yes per evitare le richieste nel procedere con l'installazione
     # Utilizza l'opzione -y per confermare automaticamente l'installazione
 fi
+
+if ! type -P docker >/dev/null 2>&1; then
+  echo "Il comando 'ciao' non è installato"
+else
+  echo "Il comando 'ciao' è installato"
+fi
