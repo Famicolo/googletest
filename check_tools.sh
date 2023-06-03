@@ -1,4 +1,4 @@
-if ! command -v g++ &> /dev/null; then
+if ! command -v g++ &> /dev/null 2>&1; then
 
     echo "Il comando g++ non è installato."
     echo "Installazione di build-essential..."
