@@ -14,3 +14,6 @@ if ! type -P docker >/dev/null 2>&1; then
 else
   echo "Il comando 'ciao' è installato"
 fi
+
+pp=$(type -P docker)
+if [ -z "$PP" ]; then echo "La variabile PP è vuota"; else echo "La variabile PP non è vuota"; fi
