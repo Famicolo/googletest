@@ -15,5 +15,5 @@ else
   echo "Il comando 'ciao' è installato"
 fi
 
-pp=$(type -P docker)
+PP=$(type -P docker)
 if [ -z "$PP" ]; then echo "La variabile PP è vuota"; else echo "La variabile PP non è vuota"; fi
