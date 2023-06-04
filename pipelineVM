@@ -1,0 +1,94 @@
+pipeline{
+    agent any
+    stages{
+        //stage('Prologue'){
+        //    steps{
+        //        sh 'echo "Create sudo credentials variable"'
+                //withCredentials([string(credentialsId: 'sudopwd', variable: 'sudoPwd')]) {
+                // some block
+                //}
+        //    }
+        //}
+        
+        stage('Checkout'){
+            steps{
+                checkout changelog: false, poll: false, scm: scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Famicolo/googletest']])
+            }
+        }
+        
+        stage('Available-Tools control '){
+            steps{
+                script{
+                    //def gppInstalled = sh(returnStatus: true, script: 'g++ --version').isSuccess()
+                    //if (!gppInstalled) {
+                        //sh 'echo ${sudoPwd} | sudo -S apt-get update'
+                        //sh 'echo ${sudoPwd} | sudo -S apt-get install -y g++'
+                    //}
+                    //sh '''
+                    //    if ! command -v g++ &> /dev/null; then 
+                    //    echo "Il comando g++ not installed."
+                    //    echo "build-essential installation..."
+                    //    echo ${sudoPwd} | sudo -S apt-get update
+                    //    #echo ${sudoPwd} | sudo -S apt-get install -y g++
+                    //    fi
+                    //   '''
+                    //sh(returnStatus: true, script: 'g++ --version').isSuccess()
+                    //def gppInstalled = hhhhhhhhh
+                    //sh 'echo ${gppInstalled}'
+                    //sh 'if command -v ciao &> /dev/null; then echo "installato"; else echo "non installato";fi'
+                    //sh 'chmod +x check_tools.sh'
+                    //sh './check_tools.sh'
+                    sh 'chmod +x check_tools.sh'
+                    sh './check_tools.sh'
+                    //sh 'sudoPwd="admin"'
+                    //sh 'apt-get update'
+                    //sh 'echo ${sudoPwd} | sudo -S apt-get update'
+                    
+                
+                }
+            }
+        }
+        
+        stage('Test functions'){
+            steps{
+                sh 'echo "Running..."'
+                sh 'echo "Building..."'
+                sh 'chmod +x ./googletest/SWEngProject/Linux-SampleTest.sh'
+                sh './googletest/SWEngProject/Linux-SampleTest.sh'
+                sh './googletest/SWEngProject/ExecSample4'
+            }
+        }
+        
+        
+        
+        stage('results'){
+            steps{
+                sh './googletest/SWEngProject/ExecSample4'
+                sh 'echo "Hello World"'
+                sh 'docker build -t dkr4sweng_test04 .'
+                sh 'docker run dkr4sweng_test04'
+                sh 'docker login -u famicolo -p SwengProject'
+                sh 'docker tag dkr4sweng_test04 famicolo/sweng_project:testjenkinsuploadVM'
+                //sh 'docker push famicolo/sweng_project:testjenkinsuploadVM'
+                //sh './crash'
+            }
+        }
+        
+        stage('share info'){
+            steps{
+                slackSend color: "good", message: "Recently compiled ${env.JOB_NAME}_${env.BUILD_NUMBER}"
+            }
+            
+        }
+    }
+    
+    post {
+    failure {
+      // Istruzione da eseguire solo in caso di errore
+      script {
+        slackSend color: "danger", message: "FAILURE in compiling ${env.JOB_NAME}_${env.BUILD_NUMBER} pipeline"
+        // Altre istruzioni da eseguire in caso di errore
+      }
+    }
+  }
+}
