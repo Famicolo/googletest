@@ -7,3 +7,6 @@ APPGpp=$(type -P docker)
 if [ -z "$APPGpp" ]; then 
     echo "g++ non installato"; else 
     echo "g++ correttamente installato"; fi
+
+echo alle8119 | su ale
+whoami
