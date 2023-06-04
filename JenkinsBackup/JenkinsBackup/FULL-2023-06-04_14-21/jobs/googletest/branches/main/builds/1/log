@@ -1,0 +1,63 @@
+Branch indexing
+[8mha:////4F4hCugVu9v/+U3ulUlWC7vsn4RoCX4fIpXkyLc2JFsxAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRHxvbrdwCCIiLfjgAAAA==[0mConnecting to https://api.github.com with no credentials, anonymous access
+[8mha:////4NGf1ZkRSyC3hx5vRGad5FWaSd2R+YQp28i4ZTTQPQb+AAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRHxva7NwGHPqdVjgAAAA==[0mJenkins-Imposed API Limiter: Current quota for Github API usage has 51 remaining (2 over budget). Next quota of 60 in 59 min. Sleeping for 6 min 44 s.
+[8mha:////4MUju7MrYLNIi62yTlTNqbvwyPKyosBAc8Y4XFmszVKjAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRHxva7twA9b67MjgAAAA==[0mJenkins is attempting to evenly distribute GitHub API requests. To configure a different rate limiting strategy, such as having Jenkins restrict GitHub API requests only when near or above the GitHub rate limit, go to "GitHub API usage" under "Configure System" in the Jenkins settings.
+[8mha:////4GJGERqHwBr26xhyzopeFbeJdefYmysJUfqLAHC3kHxvAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRHxq4l+wCQm1RwjgAAAA==[0mJenkins-Imposed API Limiter: Still sleeping, now only 3 min 41 s remaining.
+[8mha:////4G+UQ5mtJGgNr9YpmagtneKJlh+AA1JV4f/cHijghvrgAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRHxt7MqQBW3fOnjgAAAA==[0mJenkins-Imposed API Limiter: Still sleeping, now only 40 s remaining.
+ERROR: Could not do lightweight checkout, falling back to heavyweight
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at org.jenkinsci.plugins.github_branch_source.ApiRateLimitChecker$LocalChecker.waitUntilRateLimit(ApiRateLimitChecker.java:336)
+	at org.jenkinsci.plugins.github_branch_source.ApiRateLimitChecker$LocalChecker.checkRateLimit(ApiRateLimitChecker.java:272)
+	at org.jenkinsci.plugins.github_branch_source.ApiRateLimitChecker$RateLimitCheckerAdapter.checkRateLimit(ApiRateLimitChecker.java:253)
+	at org.kohsuke.github.GitHubRateLimitChecker.checkRateLimit(GitHubRateLimitChecker.java:144)
+Caused: java.io.InterruptedIOException: sleep interrupted
+	at org.kohsuke.github.GitHubRateLimitChecker.checkRateLimit(GitHubRateLimitChecker.java:158)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:431)
+Caused: org.kohsuke.github.HttpException: Server returned HTTP response code: -1, message: 'null' for URL: https://api.github.com/repos/Famicolo/googletest/contents/Jenkinsfile?ref=173251d325c4a57553ff57ccf787ac4a99d4798d
+	at org.kohsuke.github.GitHubClient.interpretApiError(GitHubClient.java:612)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:450)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:403)
+	at org.kohsuke.github.Requester.fetch(Requester.java:85)
+	at org.kohsuke.github.GHRepository.getFileContent(GHRepository.java:2680)
+	at org.jenkinsci.plugins.github_branch_source.GitHubSCMFile.metadata(GitHubSCMFile.java:114)
+	at org.jenkinsci.plugins.github_branch_source.GitHubSCMFile.content(GitHubSCMFile.java:192)
+	at jenkins.scm.api.SCMFile.contentAsString(SCMFile.java:335)
+	at org.jenkinsci.plugins.workflow.multibranch.SCMBinder.create(SCMBinder.java:108)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:312)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Checking out git https://github.com/Famicolo/googletest.git into /var/lib/jenkins/workspace/googletest_main@script/f048d9026f07960416b5e78cb358aeb858051e8f2e179e103c8fdd3f7abaadd7 to read Jenkinsfile
+The recommended git tool is: NONE
+Warning: CredentialId "github" could not be found.
+Cloning the remote Git repository
+Cloning with configured refspecs honoured and without tags
+Cloning repository https://github.com/Famicolo/googletest.git
+ > git init /var/lib/jenkins/workspace/googletest_main@script/f048d9026f07960416b5e78cb358aeb858051e8f2e179e103c8fdd3f7abaadd7 # timeout=10
+Fetching upstream changes from https://github.com/Famicolo/googletest.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.37.2'
+ > git fetch --no-tags --force --progress -- https://github.com/Famicolo/googletest.git +refs/heads/main:refs/remotes/origin/main # timeout=10
+ > git config remote.origin.url https://github.com/Famicolo/googletest.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/main:refs/remotes/origin/main # timeout=10
+Avoid second fetch
+Checking out Revision 173251d325c4a57553ff57ccf787ac4a99d4798d (main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 173251d325c4a57553ff57ccf787ac4a99d4798d # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b main 173251d325c4a57553ff57ccf787ac4a99d4798d # timeout=10
+Commit message: "aggiornato jenkinFile nel main del repository"
+First time build. Skipping changelog.
+Cleaning workspace
+ > git rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > git reset --hard # timeout=10
+ > git clean -fdx # timeout=10
+Interrotta da [8mha:////4JcZXBEWJQXTtQng1FCH82TUe75xANPvxPdrbk6M0otKAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+
+Could not update commit status, please check if your scan credentials belong to a member of the organization or a collaborator of the repository and repo:status scope is selected
+
+
+GitHub has been notified of this commit’s build result
+
+Finished: ABORTED

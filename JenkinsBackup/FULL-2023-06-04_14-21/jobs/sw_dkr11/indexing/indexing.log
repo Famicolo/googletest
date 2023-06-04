@@ -1,0 +1,30 @@
+Avviato dall'utente [8mha:////4JcZXBEWJQXTtQng1FCH82TUe75xANPvxPdrbk6M0otKAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+[mer mag 31 08:17:28 CEST 2023] Starting branch indexing...
+[8mha:////4KTrn2QMbtu4EQV0uCLZ5LSv4oCzkO5uNsskRRiuvj4hAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRHQYn7awD+WpoQjgAAAA==[0mConnecting to https://api.github.com with no credentials, anonymous access
+Examining [8mha:////4L/qjvjTko2DtKWONaVLSWx16ztQxJ3ecLZB67cnSp4IAAAAph+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMgQLmFQyygpKSi20tdPzyzJKE0C6srVd0vMzUzOz8nXT8/PT89JLUktLgEAllMBrqsAAAA=[0mFamicolo/googletest
+
+  Checking branches...
+
+  Getting remote branches...
+
+    Checking branch [8mha:////4LMi1cFyL9tRvQ4tSPZvZ6fIlgwj/Bn36XHydjEFwwGfAAAArR+LCAAAAAAAAP9djL0NwjAQRo/wMwAlYoYcFQUoFRICKaJhAhNOtsHxWfYFhTVYAxqGYBx2IIiO13yv+d7jDcMUYWqaY2KfV+wTO8o310DRWX/esdC8uD+LW3hlkG1h5MhrMSX0m+gExuVJXRQ65TXuJVqvl22EyV9u9dtvDH70MoA2dDIQmBmRkBaI2oppDt2rxrWqbcWOUTNrR0JJUCIR1sr6D8tRGP+1AAAA[0mmain
+      ‘Jenkinsfile’ found
+    Met criteria
+Scheduled build for branch: main
+
+    Checking branch [8mha:////4B8VhVNOEZffRyTB2vHDmQpOeuUttCKsQls4KLOdAPC7AAAAtR+LCAAAAAAAAP9djLENwjAQRY8g6GgoETPEHRKgNCAhkKI0sIAJJ9vg+Cz7AmEN1oCGIRiHHQii4zf/v+K/xxt6McBY14dILi3JRbKYrq8egzXuVBDjJLs/s5t/JZBsoG/RKdY5dOtgGYb5UZ6lsNIpseVgnJo3AUZ/uuWvvzL4pZMANL4dA4apZvZxJoQyrOt9+6rESlamJEtCESmLjJEFB0RR4GXXwiJIV+oP2arMDr4AAAA=[0mNewTestBranch
+      ‘Jenkinsfile’ not found
+    Does not meet criteria
+
+  2 branches were processed
+
+  Checking pull-requests...
+
+  Getting remote pull requests...
+
+  0 pull requests were processed
+
+Finished examining Famicolo/googletest
+
+[mer mag 31 08:17:30 CEST 2023] Finished branch indexing. Indexing took 2 s
+Finished: SUCCESS
