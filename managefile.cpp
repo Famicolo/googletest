@@ -20,6 +20,7 @@ int main(int argc, char* argv[]){
 	
 	if(!ost){
 		std::cerr<< "Program " << argv[0] << " cannot create file:  " << argv[2]<<std::endl; 
+		return -1; 
 	}
 	
 	ost << ist.rdbuf(); 
