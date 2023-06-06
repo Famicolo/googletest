@@ -23,7 +23,10 @@ int main(int argc, char* argv[]){
 		return -1; 
 	}
 	
-	ost << ist.rdbuf(); 
+	unsigned n; 
+	while(ifs>>n){
+		ost<<n<<std::endl; 
+	}
 	
 	return 0;
 }
