@@ -3,7 +3,7 @@ Execute sampletest for samples1 and samples2
 
 compiler call:
 
-g++ -o testmain1-2 testmain1-2.cpp googletest/samples/sample1_unittest.cc googletest/samples/sample2_unittest.cc googletest/samples/sample1.cc  googletest/samples/sample2.cc googletest/samples/sample4_unittest.cc googletest/samples/sample4.cc  -lgtest -lpthread
+g++ -o testmain1-2-4 testmain1-2-4.cpp googletest/samples/sample1_unittest.cc googletest/samples/sample2_unittest.cc googletest/samples/sample1.cc  googletest/samples/sample2.cc googletest/samples/sample4_unittest.cc googletest/samples/sample4.cc  -lgtest -lpthread
 
 */
 
