@@ -20,7 +20,7 @@ int main(int argc, char* argv[]){
   testing::InitGoogleTest(&argc, argv); 
   int exit_code = RUN_ALL_TESTS(); 
   
-  std::ofstream ofs ("output-unittest1-2.txt);
+  std::ofstream ofs ("output-unittest1-2.txt");
   if(!ofs){                   
     std::cerr<<"Cannot create file"<<std::endl; 
     return -1;  
