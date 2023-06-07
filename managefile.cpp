@@ -21,7 +21,7 @@ Returns 0 to indicate successful execution of the program.
 #include<iostream> 
 #include<fstream> 
 #include<gtest/gtest.h>
-// #include"googletest/samples/sample1.cc"
+#include"googletest/samples/sample1.cc"
 
 int main(int argc, char* argv[]){
 	
