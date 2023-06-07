@@ -1,5 +1,9 @@
+//compile with g++ -o program program.cpp googletest/samples/sample1.cc -lgtest -lpthread
+
 #include<iostream> 
 #include<fstream> 
+#include<gtest/gtest.h>
+#include"googletest/samples/sample1.cc"
 
 int main(int argc, char* argv[]){
 	
@@ -24,8 +28,8 @@ int main(int argc, char* argv[]){
 	}
 	
 	unsigned n; 
-	while(ifs>>n){
-		ost<<n<<std::endl; 
+	while(ist>>n){
+		ost<<IsPrime(n)<<std::endl; 
 	}
 	
 	return 0;
