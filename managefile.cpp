@@ -1,5 +1,5 @@
-//compile with g++ -o program program.cpp googletest/samples/sample1.cc -lgtest -lpthread
-
+//compile with g++ -o managefile managefile.cpp googletest/samples/sample1.cc -lgtest -lpthread
+//run with ./managefile input.txt ANY_OUTPUT_FILENAME.txt
 #include<iostream> 
 #include<fstream> 
 #include<gtest/gtest.h>
