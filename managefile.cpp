@@ -1,5 +1,23 @@
 //compile with g++ -o managefile managefile.cpp googletest/samples/sample1.cc -lgtest -lpthread
 //run with ./managefile input.txt ANY_OUTPUT_FILENAME.txt
+
+/*
+This code takes in two command line arguments: an input file and an output file.
+It performs the following operations:
+
+Checks if the number of command line arguments is not equal to 3 and displays an error message if true.
+Opens the input file specified by the first command line argument.
+Displays an error message if the input file cannot be opened.
+Opens the output file specified by the second command line argument.
+Displays an error message if the output file cannot be created.
+Reads numbers from the input file and checks if they are prime using the IsPrime function from sample1.cc.
+Writes the result (whether the number is prime or not) to the output file.
+Returns 0 to indicate successful execution of the program.
+*/
+
+
+
+
 #include<iostream> 
 #include<fstream> 
 #include<gtest/gtest.h>
