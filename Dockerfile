@@ -10,7 +10,7 @@ COPY output.txt /SwengProject/output.txt
 
 # lounch the executable
 
-CMD ["/SwengProject/managefile input.txt output.txt"]
+CMD ["/SwengProject/managefile /SwengProject/input.txt /SwengProject/output.txt"]
 #CMD ["/bin/bash"]
 
 
