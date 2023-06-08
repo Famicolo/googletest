@@ -13,6 +13,6 @@ COPY output.txt ./project/output.txt
 #CMD ["/bin/bash"]
 #CMD["cd project"]
 CMD ["./project/managefile ./project/input.txt ./project/output.txt"]
-CMD ["cat ./project/output.txt"]
+#CMD ["cat ./project/output.txt"]
 
 
