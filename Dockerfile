@@ -12,7 +12,7 @@ COPY input.txt ./project/input.txt
 
 #CMD ["/bin/bash"]
 #CMD["cd project"]
-CMD ["./project/managefile ./project/input.txt ./project/output.txt"]
+#CMD ["./project/managefile ./project/input.txt ./project/output.txt"]
 #CMD ["cat ./project/output.txt"]
 
 
