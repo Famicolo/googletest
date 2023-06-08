@@ -10,7 +10,7 @@ COPY output.txt output.txt
 
 # lounch the executable
 
-CMD ["./managefile input.txt output.txt"]
-#CMD ["/bin/bash"]
+#CMD ["./managefile input.txt output.txt"]
+CMD ["/bin/bash"]
 
 
