@@ -6,7 +6,7 @@ FROM ubuntu:latest
 
 COPY managefile ./project/managefile
 COPY input.txt ./project/input.txt
-COPY output.txt ./project/output.txt
+#COPY output.txt ./project/output.txt
 
 # lounch the executable
 
