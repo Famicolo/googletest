@@ -1,4 +1,4 @@
-// calc_test.cpp
+// calc_test.cpp for testing
 #include <gtest/gtest.h>
 #include "calc.hpp"
 
