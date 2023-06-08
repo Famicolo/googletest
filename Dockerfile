@@ -2,17 +2,18 @@
 
 FROM ubuntu:latest
 
-# copy the executable file
+# Copy the executable file and input/output files
 
-COPY managefile ./project/managefile
-COPY input.txt ./project/input.txt
-#COPY output.txt ./project/output.txt
+COPY managefile /project/managefile
+COPY input.txt /project/input.txt
+COPY output.txt /project/output.txt
 
-# lounch the executable
+# Set the working directory
 
-#CMD ["/bin/bash"]
-#CMD["cd project"]
-#CMD ["./project/managefile ./project/input.txt ./project/output.txt"]
-#CMD ["cat ./project/output.txt"]
+WORKDIR /project
+
+# Launch the executable
+
+CMD ["/project/managefile", "/project/input.txt", "/project/output.txt"]
 
 
