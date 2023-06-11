@@ -95,7 +95,7 @@ pipeline{
       
           script {
             slackSend color: "danger", message: "FAILURE in compiling ${env.JOB_NAME}_${env.BUILD_NUMBER} pipeline"
-            // Altre istruzioni da eseguire in caso di errore
+          
                 }
         }
     }
