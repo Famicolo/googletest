@@ -76,7 +76,7 @@ pipeline{
             steps{
                 sh 'docker build -t projectmaster03 .'
                 sh 'docker run projectmaster03'
-                sh 'docker login -u famicolo -p SwengProject'
+                sh 'docker login -u USERNAME_HERE -p PUT_PASSWORD_HERE'
                 sh 'docker tag projectmaster03 famicolo/sweng_project:Img_projectmaster03'
                 sh 'docker push famicolo/sweng_project:Img_projectmaster03'
                 slackSend color: "good", message: "Docker image ${env.JOB_NAME}_${env.BUILD_NUMBER} created and available on Docker Hub"
